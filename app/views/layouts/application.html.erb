@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LandingPage</title>
+  <meta charset="utf-8">
+  <title><%=t :project_name %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "364f86b1-a8af-468d-b0e6-cf184c54768e"}); </script>
+
 </head>
 <body>
 
-<%= yield %>
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="/"><%=t :project_name %></a>
+				<ul class="nav pull-right">
+					<li><a href="mailto:<%= APPLICATION_CONSTANTS['contact_email'] %>">Contact</a></li>
+					<li><a href="<%= APPLICATION_CONSTANTS['blog_url'] %>">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+	<%= yield %>
+
+	<br/><br/><br/><br/>
+
+	<div class="row">
+		<div class="span7 offset4">
+			<!-- Begin MailChimp Signup Form -->
+			<form class="" action="http://sigilant.us4.list-manage1.com/subscribe/post?u=ecd9f9d648bb266d103ca42f4&amp;id=bb83ee546a" method="post" name="mc-embedded-subscribe-form" target="_blank">
+				<div class="control-group">
+					<div class="controls">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-envelope"></i></span>
+							<input class="add-on" type="text" name="EMAIL" placeholder="Your email address..." value="" />
+							<input class="btn" type="submit" value="Subscribe to Newsletter" name="subscribe" onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Subscribe']);" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<br/><br/><br/><br/>
+	<br/><br/><br/><br/>
+
+			<div class='row' style='text-align:center'>
+				<span class='st_sharethis_hcount' displayText='ShareThis'></span>
+				<span class='st_facebook_hcount' displayText='Facebook'></span>
+				<span class='st_fblike_hcount' displayText='Facebook Like'></span>
+				<span class='st_twitter_hcount' displayText='Tweet'></span>
+				<span class='st_twitterfollow_hcount' displayText='Twitter Follow' st_username='<%= APPLICATION_CONSTANTS['twitter_account'] %>'></span>
+				<span class='st_plusone_hcount' displayText='Google +1'></span>
+			</div>
+
+			<br/><br/>
+
+			<footer style='text-align:center'>
+				<p>&copy; <a href='mailto:<%= APPLICATION_CONSTANTS['contact_email'] %>'><%=t :project_name %></a> 2012</p>
+			</footer>
+		</div> <!-- /container -->
 
 </body>
 </html>

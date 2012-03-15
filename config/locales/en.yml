@@ -2,4 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  project_name: Project Name
+  header:
+    heading: Heading
+    tagline_html: The <b>best</b> tagline you can find in the world!
+  usp1:
+    title: Lorem Ipsum
+    content_html: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  usp2:
+    title: Lorem Ipsum
+    content_html: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  usp3:
+    title: Lorem Ipsum
+    content_html: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
